@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { Formik } from 'formik';
 import LinearGradient from 'react-native-linear-gradient';
+import globalStyles from '../styles.js';
 
 const Signup = ({ navigation }) => (
   <View style={styles.container}>
@@ -21,13 +22,13 @@ const Signup = ({ navigation }) => (
       {(props) => (
         <View style={styles.form}>
           <Text style={styles.welcomeText}>Welcome!</Text>
-          <TextInput style={styles.inputField} placeholder="Email" onChangeText={props.handleChange('email')} value={props.values.email} />
-          <TextInput style={styles.inputField} placeholder="Username" onChangeText={props.handleChange('username')} value={props.values.username} />
-          <TextInput style={styles.inputField} placeholder="Password" onChangeText={props.handleChange('password')} value={props.values.password} />
-          <TextInput style={styles.inputField} placeholder="Confirm Password" onChangeText={props.handleChange('confirmPassword')} value={props.values.confirmPassword} />
-          <TouchableOpacity style={styles.signUpBtn} onPress={props.handleSubmit}>
-            <LinearGradient colors={['#fcc288', '#ef7a40']} start={{x: 0, y: 0.5}} end={{x: 1, y: 0.5}} style={styles.linearGradient}>
-              <Text style={styles.signUpBtnText}>Sign Up</Text>
+          <TextInput style={globalStyles.inputField} placeholder="Email" onChangeText={props.handleChange('email')} value={props.values.email} />
+          <TextInput style={globalStyles.inputField} placeholder="Username" onChangeText={props.handleChange('username')} value={props.values.username} />
+          <TextInput style={globalStyles.inputField} placeholder="Password" onChangeText={props.handleChange('password')} value={props.values.password} />
+          <TextInput style={globalStyles.inputField} placeholder="Confirm Password" onChangeText={props.handleChange('confirmPassword')} value={props.values.confirmPassword} />
+          <TouchableOpacity style={globalStyles.wideBtn} onPress={props.handleSubmit}>
+            <LinearGradient colors={['#fcc288', '#ef7a40']} start={{x: 0, y: 0.5}} end={{x: 1, y: 0.5}} style={globalStyles.wideBtnGradient}>
+              <Text style={globalStyles.wideBtnText}>Sign Up</Text>
             </LinearGradient>
           </TouchableOpacity>
           <Text style={styles.loginText} onPress={() => navigation.navigate('Login')}>Already have an account? Login</Text>
@@ -86,6 +87,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontStyle: 'italic',
   },
+  form: {
+   ...globalStyles.form,
+    flex: 1,
+  },
   welcomeText: {
     alignSelf: 'flex-start',
     fontFamily: 'roboto',
@@ -93,29 +98,6 @@ const styles = StyleSheet.create({
     color: '#faab6c',
     fontWeight: 'bold',
     marginBottom: 50,
-  },
-  form: {
-    flex: 1,
-    width: 0.8 * width,
-  },
-  inputField: {
-    fontFamily: 'roboto',
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgrey',
-    color: 'lightgrey'
-  },
-  signUpBtn: {
-    marginTop: 20,
-    marginBottom: 10,
-    borderRadius: 20,
-  },    
-  signUpBtnText: {
-    textAlign: 'center',
-    padding: 10,
-    color: '#fff',
-  },
-  linearGradient: {
-    borderRadius: 20,
   },
   loginText: {
     color: '#faab6c',

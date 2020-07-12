@@ -3,18 +3,19 @@ import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import { Formik } from 'formik';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
+import globalStyles from '../styles.js';
 
 const Login = () => (
   <View style={styles.container}>
     <Formik initialValues={{ username: '', password: '' }}>
       {(props) => (
-        <View style={styles.form}>
+        <View style={globalStyles.form}>
           <Text style={styles.loginText}>Login</Text>
-          <TextInput style={styles.inputField}placeholder="username" onChange={props.handleChange('username')} value={props.values.username} />
-          <TextInput style={styles.inputField} placeholder="password" onChange={props.handleChange('password')} value={props.values.password} />
-          <TouchableOpacity style={styles.loginBtn}>
-            <LinearGradient colors={['#fcc288', '#ef7a40']} start={{x: 0, y: 0.5}} end={{x: 1, y: 0.5}} style={styles.linearGradient}>
-              <Text style={styles.loginBtnText}>Login</Text>
+          <TextInput style={globalStyles.inputField}placeholder="Username" onChange={props.handleChange('username')} value={props.values.username} />
+          <TextInput style={globalStyles.inputField} placeholder="Password" onChange={props.handleChange('password')} value={props.values.password} />
+          <TouchableOpacity style={globalStyles.wideBtn}>
+            <LinearGradient colors={['#fcc288', '#ef7a40']} start={{x: 0, y: 0.5}} end={{x: 1, y: 0.5}} style={globalStyles.wideBtnGradient}>
+              <Text style={globalStyles.wideBtnText}>Login</Text>
             </LinearGradient>
           </TouchableOpacity>
         </View>
@@ -30,28 +31,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
     backgroundColor: 'white',
-  },
-  form: {
-    width: '80%',
-  },
-  inputField: {
-    fontFamily: 'roboto',
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgrey',
-    color: 'lightgrey'
-  },
-  loginBtn: {
-    marginTop: 20,
-    marginBottom: 10,
-    borderRadius: 20,
-  },    
-  loginBtnText: {
-    textAlign: 'center',
-    padding: 10,
-    color: '#fff',
-  },
-  linearGradient: {
-    borderRadius: 20,
   },
   loginText: {
     alignSelf: 'flex-start',
