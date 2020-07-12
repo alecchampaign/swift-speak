@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const globalStyles = {
+const globalStyles = StyleSheet.create({
   wideBtn: {
     marginTop: 20,
     marginBottom: 10,
@@ -22,6 +22,6 @@ const globalStyles = {
     borderBottomWidth: 1,
     borderBottomColor: 'lightgrey',
   },
-}
+});
 
 export default globalStyles;

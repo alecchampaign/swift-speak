@@ -10,6 +10,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import { fromRight } from 'react-navigation-transitions';
 import Signup from './components/Signup';
 import Login from './components/Login';
 
