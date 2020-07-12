@@ -1,4 +1,4 @@
-#Sun Jul 05 18:48:27 EDT 2020
+#Sat Jul 11 20:21:47 EDT 2020
 base.0=/home/alec/swift-speak/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -19,7 +19,7 @@ const App: () => React$Node = () => {
   return (
     <NavigationContainer>
       <StatusBar barStyle="dark-content" backgroundColor="white" />
-      <Stack.Navigator  initialRouteName="Signup">
+      <Stack.Navigator  initialRouteName="Signup" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
