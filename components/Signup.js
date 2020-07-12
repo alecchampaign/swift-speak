@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { Formik } from 'formik';
 import LinearGradient from 'react-native-linear-gradient';
-import BigHead from '@bigheads/core';
 
 const Signup = ({ navigation }) => (
   <View style={styles.container}>
@@ -20,7 +19,7 @@ const Signup = ({ navigation }) => (
       // needs an onSubmit prop here
     >
       {(props) => (
-        <View style={ styles.form }>
+        <View style={styles.form}>
           <Text style={styles.welcomeText}>Welcome!</Text>
           <TextInput style={styles.inputField} placeholder="Email" onChangeText={props.handleChange('email')} value={props.values.email} />
           <TextInput style={styles.inputField} placeholder="Username" onChangeText={props.handleChange('username')} value={props.values.username} />
