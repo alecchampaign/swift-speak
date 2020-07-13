@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "835555988586",
+    "firebase_url": "https://swift-speak.firebaseio.com",
+    "project_id": "swift-speak",
+    "storage_bucket": "swift-speak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835555988586:android:07f5ec2ecf9ff0de082613",
+        "android_client_info": {
+          "package_name": "com.swiftspeak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835555988586-lmnvdf5a9ftr453bmilitj1817ei842u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhKzwcROuZdjtaBTYb5P3klS1-8PtS8jk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835555988586-lmnvdf5a9ftr453bmilitj1817ei842u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
