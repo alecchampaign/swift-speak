@@ -17,12 +17,12 @@
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 13-->[com.facebook.flipper:flipper:0.33.1] /home/alec/.gradle/caches/transforms-2/files-2.1/cf4990e6c43025b26e3ddae7ea1fab36/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
 13-->[com.facebook.flipper:flipper:0.33.1] /home/alec/.gradle/caches/transforms-2/files-2.1/cf4990e6c43025b26e3ddae7ea1fab36/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
-14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:23:5-79
-14-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:23:22-76
-15    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-15-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:24:5-68
-15-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:24:22-65
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[:react-native-firebase_auth] /home/alec/swift-speak/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+14-->[:react-native-firebase_auth] /home/alec/swift-speak/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+15-->[:react-native-firebase_auth] /home/alec/swift-speak/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
+15-->[:react-native-firebase_auth] /home/alec/swift-speak/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
 16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 16-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:26:5-82
 16-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:26:22-79
@@ -75,106 +75,126 @@
 41        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 41-->/home/alec/swift-speak/android/app/src/main/AndroidManifest.xml:24:7-84
 41-->/home/alec/swift-speak/android/app/src/main/AndroidManifest.xml:24:17-81
-42
-43        <service
-43-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:27:9-33:19
-44            android:name="com.google.firebase.components.ComponentDiscoveryService"
-44-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:28:13-84
-45            android:directBootAware="true"
-45-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
-46            android:exported="false" >
-46-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:29:13-37
-47            <meta-data
-47-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:30:13-32:85
-48                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-48-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:31:17-139
-49                android:value="com.google.firebase.components.ComponentRegistrar" />
-49-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:32:17-82
-50            <meta-data
-50-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:32:13-34:85
-51                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-51-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:33:17-96
-52                android:value="com.google.firebase.components.ComponentRegistrar" />
-52-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:34:17-82
-53            <meta-data
-53-->[com.google.firebase:firebase-installations:16.2.1] /home/alec/.gradle/caches/transforms-2/files-2.1/24c742431253f4b72d438133116b1a60/firebase-installations-16.2.1/AndroidManifest.xml:17:13-19:85
-54                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-54-->[com.google.firebase:firebase-installations:16.2.1] /home/alec/.gradle/caches/transforms-2/files-2.1/24c742431253f4b72d438133116b1a60/firebase-installations-16.2.1/AndroidManifest.xml:18:17-127
-55                android:value="com.google.firebase.components.ComponentRegistrar" />
-55-->[com.google.firebase:firebase-installations:16.2.1] /home/alec/.gradle/caches/transforms-2/files-2.1/24c742431253f4b72d438133116b1a60/firebase-installations-16.2.1/AndroidManifest.xml:19:17-82
-56        </service>
-57
-58        <receiver
-58-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:37:9-44:20
-59            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-59-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:38:13-78
-60            android:exported="true"
-60-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:39:13-36
-61            android:permission="com.google.android.c2dm.permission.SEND" >
-61-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:40:13-73
-62            <intent-filter>
-62-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:41:13-43:29
-63                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-63-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:42:17-81
-63-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:42:25-78
-64            </intent-filter>
-65        </receiver>
-66
-67        <provider
-67-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
-68            android:name="com.google.firebase.provider.FirebaseInitProvider"
-68-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
-69            android:authorities="com.swiftspeak.firebaseinitprovider"
-69-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
-70            android:exported="false"
-70-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
-71            android:initOrder="100" />
-71-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
-72
-73        <activity
-73-->[com.google.android.gms:play-services-base:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-74            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-74-->[com.google.android.gms:play-services-base:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-75            android:exported="false"
-75-->[com.google.android.gms:play-services-base:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-76-->[com.google.android.gms:play-services-base:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-77
-78        <receiver
-78-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:29:9-33:20
-79            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-79-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:30:13-85
-80            android:enabled="true"
-80-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:31:13-35
-81            android:exported="false" >
-81-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:32:13-37
-82        </receiver>
-83
-84        <service
-84-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:35:9-38:40
-85            android:name="com.google.android.gms.measurement.AppMeasurementService"
-85-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:36:13-84
-86            android:enabled="true"
-86-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:37:13-35
-87            android:exported="false" />
-87-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:38:13-37
-88        <service
-88-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:39:9-43:72
-89            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-89-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:40:13-87
+42        <activity
+42-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:24:9-31:50
+43            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+43-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:25:13-85
+44            android:excludeFromRecents="true"
+44-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:26:13-46
+45            android:exported="true"
+45-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:27:13-36
+46            android:launchMode="singleTask"
+46-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:28:13-44
+47            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+47-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:29:13-102
+48            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+48-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:30:13-72
+49
+50        <service
+50-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:33:9-39:19
+51            android:name="com.google.firebase.components.ComponentDiscoveryService"
+51-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:34:13-84
+52            android:directBootAware="true"
+52-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+53            android:exported="false" >
+53-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:35:13-37
+54            <meta-data
+54-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:36:13-38:85
+55                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+55-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:37:17-109
+56                android:value="com.google.firebase.components.ComponentRegistrar" />
+56-->[com.google.firebase:firebase-auth:19.3.1] /home/alec/.gradle/caches/transforms-2/files-2.1/852d194e863fd0e60c724f3cbdf438f9/firebase-auth-19.3.1/AndroidManifest.xml:38:17-82
+57            <meta-data
+57-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:30:13-32:85
+58                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+58-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:31:17-139
+59                android:value="com.google.firebase.components.ComponentRegistrar" />
+59-->[com.google.android.gms:play-services-measurement-api:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c67bc3d0ac69dfe086f68180c44a17ff/play-services-measurement-api-17.4.3/AndroidManifest.xml:32:17-82
+60            <meta-data
+60-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:32:13-34:85
+61                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+61-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:33:17-96
+62                android:value="com.google.firebase.components.ComponentRegistrar" />
+62-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:34:17-82
+63            <meta-data
+63-->[com.google.firebase:firebase-installations:16.2.1] /home/alec/.gradle/caches/transforms-2/files-2.1/24c742431253f4b72d438133116b1a60/firebase-installations-16.2.1/AndroidManifest.xml:17:13-19:85
+64                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+64-->[com.google.firebase:firebase-installations:16.2.1] /home/alec/.gradle/caches/transforms-2/files-2.1/24c742431253f4b72d438133116b1a60/firebase-installations-16.2.1/AndroidManifest.xml:18:17-127
+65                android:value="com.google.firebase.components.ComponentRegistrar" />
+65-->[com.google.firebase:firebase-installations:16.2.1] /home/alec/.gradle/caches/transforms-2/files-2.1/24c742431253f4b72d438133116b1a60/firebase-installations-16.2.1/AndroidManifest.xml:19:17-82
+66        </service>
+67
+68        <receiver
+68-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:37:9-44:20
+69            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+69-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:38:13-78
+70            android:exported="true"
+70-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:39:13-36
+71            android:permission="com.google.android.c2dm.permission.SEND" >
+71-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:40:13-73
+72            <intent-filter>
+72-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:41:13-43:29
+73                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+73-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:42:17-81
+73-->[com.google.firebase:firebase-iid:20.1.5] /home/alec/.gradle/caches/transforms-2/files-2.1/0e74e9fd5fc5b42223e01e8c833de65c/firebase-iid-20.1.5/AndroidManifest.xml:42:25-78
+74            </intent-filter>
+75        </receiver>
+76
+77        <provider
+77-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+78            android:name="com.google.firebase.provider.FirebaseInitProvider"
+78-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+79            android:authorities="com.swiftspeak.firebaseinitprovider"
+79-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+80            android:exported="false"
+80-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+81            android:initOrder="100" />
+81-->[com.google.firebase:firebase-common:19.3.0] /home/alec/.gradle/caches/transforms-2/files-2.1/a2d51ff7af7f8de3fc2e728ac78eab2b/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+82
+83        <activity
+83-->[com.google.android.gms:play-services-base:17.1.0] /home/alec/.gradle/caches/transforms-2/files-2.1/2bf143a8a6d9cc9b01c998d0d6ca7843/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+84            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+84-->[com.google.android.gms:play-services-base:17.1.0] /home/alec/.gradle/caches/transforms-2/files-2.1/2bf143a8a6d9cc9b01c998d0d6ca7843/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+85            android:exported="false"
+85-->[com.google.android.gms:play-services-base:17.1.0] /home/alec/.gradle/caches/transforms-2/files-2.1/2bf143a8a6d9cc9b01c998d0d6ca7843/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+86            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+86-->[com.google.android.gms:play-services-base:17.1.0] /home/alec/.gradle/caches/transforms-2/files-2.1/2bf143a8a6d9cc9b01c998d0d6ca7843/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+87
+88        <receiver
+88-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:29:9-33:20
+89            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+89-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:30:13-85
 90            android:enabled="true"
-90-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:41:13-35
-91            android:exported="false"
-91-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:42:13-37
-92            android:permission="android.permission.BIND_JOB_SERVICE" />
-92-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:43:13-69
+90-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:31:13-35
+91            android:exported="false" >
+91-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:32:13-37
+92        </receiver>
 93
-94        <meta-data
-94-->[com.google.android.gms:play-services-basement:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/5fd6686c34b7531eb4c6f580b987f817/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-95            android:name="com.google.android.gms.version"
-95-->[com.google.android.gms:play-services-basement:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/5fd6686c34b7531eb4c6f580b987f817/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-96            android:value="@integer/google_play_services_version" />
-96-->[com.google.android.gms:play-services-basement:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/5fd6686c34b7531eb4c6f580b987f817/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-97    </application>
-98
-99</manifest>
+94        <service
+94-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:35:9-38:40
+95            android:name="com.google.android.gms.measurement.AppMeasurementService"
+95-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:36:13-84
+96            android:enabled="true"
+96-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:37:13-35
+97            android:exported="false" />
+97-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:38:13-37
+98        <service
+98-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:39:9-43:72
+99            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+99-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:40:13-87
+100            android:enabled="true"
+100-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:41:13-35
+101            android:exported="false"
+101-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:42:13-37
+102            android:permission="android.permission.BIND_JOB_SERVICE" />
+102-->[com.google.android.gms:play-services-measurement:17.4.3] /home/alec/.gradle/caches/transforms-2/files-2.1/c531877ac574da7730afb759f69e7e3a/play-services-measurement-17.4.3/AndroidManifest.xml:43:13-69
+103
+104        <meta-data
+104-->[com.google.android.gms:play-services-basement:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/5fd6686c34b7531eb4c6f580b987f817/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+105            android:name="com.google.android.gms.version"
+105-->[com.google.android.gms:play-services-basement:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/5fd6686c34b7531eb4c6f580b987f817/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+106            android:value="@integer/google_play_services_version" />
+106-->[com.google.android.gms:play-services-basement:17.0.0] /home/alec/.gradle/caches/transforms-2/files-2.1/5fd6686c34b7531eb4c6f580b987f817/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+107    </application>
+108
+109</manifest>

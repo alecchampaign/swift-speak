@@ -2,8 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { Formik } from 'formik';
 import LinearGradient from 'react-native-linear-gradient';
-import {Transition, animated} from 'react-spring/renderprops'
+import {Transition, animated} from 'react-spring/renderprops';
+import auth from "@react-native-firebase/auth";
 import globalStyles from '../styles.js';
+
+const createUser = async (email, password) => {
+  try {
+   const response =  await auth().createUserWithEmailAndPassword(email, password);
+    if(response){
+      console.log(tag,"🍎",response)
+    }
+  } catch (e) {
+    console.error(e.message);
+  }
+}
 
 const Signup = ({ navigation }) => {
   const [items] = useState([
@@ -39,6 +51,11 @@ const Signup = ({ navigation }) => {
       <Formik 
         initialValues={{ email: '', username: '', password: '', confirmPassword: '' }}
         // needs an onSubmit prop here
+        onSubmit={values => {
+          if (values.password !== values.confirmPassword) return;
+          createUser(values.email, values.password)
+          navigation.navigate('Login');
+        }}
       >
         {(props) => (
           <View style={styles.form}>
