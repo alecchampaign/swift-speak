@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions, Keyboard } from 'react-native';
 import { Formik } from 'formik';
 import LinearGradient from 'react-native-linear-gradient';
 import {Transition, animated} from 'react-spring/renderprops';
@@ -10,10 +10,10 @@ const createUser = async (email, password) => {
   try {
    const response =  await auth().createUserWithEmailAndPassword(email, password);
     if(response){
-      console.log(tag,"🍎",response)
+      console.log(tag,"🍎",response);
     }
   } catch (e) {
-    console.error(e.message);
+    alert(e.message);
   }
 }
 
@@ -22,12 +22,19 @@ const Signup = ({ navigation }) => {
     { title: '你好', pinyin: 'Nǐ hǎo', translation: 'Hello', key: 0 },
     { title: '欢迎', pinyin: 'Huānyíng', translation: 'Welcome', key: 1 },
     { title: '高兴', pinyin: 'Gāoxìng', translation: 'Happy', key: 2 },
-    { title: '中文', pinyin: 'Zhōngwén', translation: 'Chinese', key: 3 },
+    { title: '中文', pinyin: 'Zhōngwén', translation: 'Chinese language', key: 3 },
     { title: '谢谢', pinyin: 'Xièxiè', translation: 'Thanks', key: 4}
   ]);
   const [index, setIndex] = useState(0);
+  const [hasEmptyField, setHasEmptyField] = useState(false);
+  const [hasShortPassword, setHasShortPassword] = useState(false);
+  const [hasInvalidEmail, setHasInvalidEmail] = useState(false);
+  const [hasMixedPasswords, setHasMixedPasswords] = useState(false);
+  const [keyboardIsOpen, setKeyboardIsOpen] = useState(false);
   const AnimatedView = animated(View);
   useEffect(() => {
+    Keyboard.addListener('keyboardDidShow', () => setKeyboardIsOpen(true));
+    Keyboard.addListener('keyboardDidHide', () => setKeyboardIsOpen(false));
     const interval = setInterval(() => {
         setIndex((state) => (state + 1) % items.length);
       }, 5000);
@@ -35,7 +42,7 @@ const Signup = ({ navigation }) => {
   }, []);
   return (
     <View style={styles.container}>
-      <View style={styles.chineseWelcomeTextContainer}>
+      {keyboardIsOpen === false ? (<View style={styles.chineseWelcomeTextContainer}>
         <Transition native items={items[index]} keys={item => item.key} from={{ opacity: 0 }} enter={{ opacity: 1 }} leave={{ opacity: 0 }} config={{duration: 1000}}>
           {item => props => (
             <AnimatedView style={{...styles.chineseWelcomeTextSubcontainer, position: 'absolute', ...props}}>
@@ -47,19 +54,51 @@ const Signup = ({ navigation }) => {
             </AnimatedView>
           )} 
         </Transition>
-      </View>
+      </View>) : (<></>)}
       <Formik 
         initialValues={{ email: '', username: '', password: '', confirmPassword: '' }}
-        // needs an onSubmit prop here
         onSubmit={values => {
-          if (values.password !== values.confirmPassword) return;
-          createUser(values.email, values.password)
+          console.log(values.username.length)
+          const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/g;
+          if (values.email.length === 0 || values.username.length === 0 || values.password.length === 0 || values.confirmPassword.length === 0) {
+            setHasEmptyField(true);
+            setHasInvalidEmail(false);
+            setHasShortPassword(false);
+            setHasMixedPasswords(false);
+            return;
+          } else setHasEmptyField(false);
+          if (!values.email.match(emailRegex)) {
+            setHasInvalidEmail(true);
+            setHasEmptyField(false);
+            setHasShortPassword(false);
+            setHasMixedPasswords(false);
+            return;
+          } else setHasInvalidEmail(false);
+          if (values.password.length < 6) {
+            setHasShortPassword(true);
+            setHasInvalidEmail(false);
+            setHasEmptyField(false);
+            setHasMixedPasswords(false);
+            return;
+          } else setHasShortPassword(false);
+          if (values.password !== values.confirmPassword) {
+            setHasMixedPasswords(true);
+            setHasInvalidEmail(false);
+            setHasEmptyField(false);
+            setHasShortPassword(false);
+            return;
+          } else setHasMixedPasswords(false);
+          createUser(values.email, values.password);
           navigation.navigate('Login');
         }}
       >
         {(props) => (
           <View style={styles.form}>
             <Text style={styles.welcomeText}>Welcome!</Text>
+            {hasEmptyField ? (<Text style={styles.requiredText}>*Please fill out all fields</Text>) : (<></>)}
+            {hasShortPassword ? (<Text style={styles.requiredText}>*Passwords must have at least 6 characters</Text>) : (<></>)}
+            {hasInvalidEmail ? (<Text style={styles.requiredText}>*Email must be valid</Text>) : (<></>)}
+            {hasMixedPasswords ? (<Text style={styles.requiredText}>*Passwords must match</Text>) : (<></>)}
             <TextInput style={globalStyles.inputField} placeholder="Email" onChangeText={props.handleChange('email')} value={props.values.email} />
             <TextInput style={globalStyles.inputField} placeholder="Username" onChangeText={props.handleChange('username')} value={props.values.username} />
             <TextInput style={globalStyles.inputField} placeholder="Password" onChangeText={props.handleChange('password')} value={props.values.password} />
@@ -145,6 +184,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignSelf: 'center',
   },
+  requiredText: {
+    color: '#ff1500',
+    fontStyle: 'italic',
+    fontSize: 12
+  }
 })
 
 export default Signup;
