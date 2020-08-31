@@ -22,6 +22,11 @@ const globalStyles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: 'lightgrey',
   },
+  requiredText: {
+    color: '#ff1500',
+    fontStyle: 'italic',
+    fontSize: 12
+  }
 });
 
 export default globalStyles;

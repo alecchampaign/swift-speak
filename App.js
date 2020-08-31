@@ -13,6 +13,7 @@ import {
 import { fromRight } from 'react-navigation-transitions';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Home from './components/Home';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const App: () => React$Node = () => {
       <Stack.Navigator  initialRouteName="Signup" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

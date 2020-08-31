@@ -95,10 +95,10 @@ const Signup = ({ navigation }) => {
         {(props) => (
           <View style={styles.form}>
             <Text style={styles.welcomeText}>Welcome!</Text>
-            {hasEmptyField ? (<Text style={styles.requiredText}>*Please fill out all fields</Text>) : (<></>)}
-            {hasShortPassword ? (<Text style={styles.requiredText}>*Passwords must have at least 6 characters</Text>) : (<></>)}
-            {hasInvalidEmail ? (<Text style={styles.requiredText}>*Email must be valid</Text>) : (<></>)}
-            {hasMixedPasswords ? (<Text style={styles.requiredText}>*Passwords must match</Text>) : (<></>)}
+            {hasEmptyField ? (<Text style={globalStyles.requiredText}>*Please fill out all fields</Text>) : (<></>)}
+            {hasShortPassword ? (<Text style={globalStyles.requiredText}>*Passwords must have at least 6 characters</Text>) : (<></>)}
+            {hasInvalidEmail ? (<Text style={globalStyles.requiredText}>*Email must be valid</Text>) : (<></>)}
+            {hasMixedPasswords ? (<Text style={globalStyles.requiredText}>*Passwords must match</Text>) : (<></>)}
             <TextInput style={globalStyles.inputField} placeholder="Email" onChangeText={props.handleChange('email')} value={props.values.email} />
             <TextInput style={globalStyles.inputField} placeholder="Username" onChangeText={props.handleChange('username')} value={props.values.username} />
             <TextInput style={globalStyles.inputField} placeholder="Password" onChangeText={props.handleChange('password')} value={props.values.password} />
@@ -184,11 +184,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignSelf: 'center',
   },
-  requiredText: {
-    color: '#ff1500',
-    fontStyle: 'italic',
-    fontSize: 12
-  }
 })
 
 export default Signup;
