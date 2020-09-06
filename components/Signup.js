@@ -5,15 +5,17 @@ import LinearGradient from 'react-native-linear-gradient';
 import {Transition, animated} from 'react-spring/renderprops';
 import auth from "@react-native-firebase/auth";
 import globalStyles from '../styles.js';
+import axios from 'axios';
 
-const createUser = async (email, password) => {
+const createUser = async (email, password, username) => {
   try {
-   const response =  await auth().createUserWithEmailAndPassword(email, password);
-    if(response){
-      console.log(tag,"🍎",response);
+   const response = await auth().createUserWithEmailAndPassword(email, password);
+    if (response) {
+      const userData = { token: response.user.uid, username }
+      axios.post('http://192.168.1.243:3000/user', userData).catch(err => console.error(err));
     }
   } catch (e) {
-    alert(e.message);
+    console.error(e.message);
   }
 }
 
@@ -88,7 +90,7 @@ const Signup = ({ navigation }) => {
             setHasShortPassword(false);
             return;
           } else setHasMixedPasswords(false);
-          createUser(values.email, values.password);
+          createUser(values.email, values.password, values.username);
           navigation.navigate('Login');
         }}
       >
